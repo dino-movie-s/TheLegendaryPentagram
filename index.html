@@ -8,25 +8,54 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap');
         
-        body {
+        body, html {
             margin: 0;
             padding: 0;
             background-color: #000;
             color: #fff;
             font-family: 'Oswald', sans-serif;
             overflow-x: hidden;
+            height: 100%;
         }
 
-        /* Hero Section */
+        /* حاوية الفيديو */
         .hero {
+            position: relative;
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), #000), url('images/main-hero.jpg');
-            background-size: cover;
-            background-position: center;
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* طبقة سوداء خفيفة فوق الفيديو عشان الكتابة تبان */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
         }
 
@@ -36,15 +65,11 @@
             letter-spacing: 10px;
             color: #e63946;
             text-transform: uppercase;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            letter-spacing: 5px;
-            margin-top: 10px;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
         }
 
         .btn-red {
+            display: inline-block;
             margin-top: 30px;
             padding: 15px 40px;
             background-color: #e63946;
@@ -52,57 +77,23 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: 0.3s;
             text-transform: uppercase;
-        }
-
-        .btn-red:hover { background-color: #fff; color: #000; }
-
-        /* Story Section */
-        .content-section {
-            padding: 100px 10%;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .content-section h2 {
-            color: #e63946;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        .content-section p {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #ccc;
-        }
-
-        footer {
-            padding: 50px;
-            text-align: center;
-            border-top: 1px solid #222;
-            font-size: 0.9rem;
-            color: #666;
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <h1>The Legendary Pentagram</h1>
-        <p>Cretaceous Period</p>
-        <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn-red">Watch The Prologue</a>
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="images/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>The Legendary Pentagram</h1>
+            <p style="letter-spacing: 5px;">CRETACEOUS PERIOD</p>
+            <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn-red">Watch The Prologue</a>
+        </div>
     </section>
-
-    <section class="content-section">
-        <h2>Visual Storytelling</h2>
-        <p>Experience the raw, silent struggle for survival in the late Cretaceous period. Follow five dinosaur factions as they navigate a world where actions speak louder than words. An independent animated epic by Malek Mohamed.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Dino Movie Studios. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
