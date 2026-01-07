@@ -19,7 +19,7 @@
             height: 100%;
         }
 
-        /* حاوية الفيديو الرئيسية */
+        /* حاوية الفيديو */
         .hero {
             position: relative;
             height: 100vh;
@@ -28,9 +28,10 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            background-color: #000; /* لون احتياطي */
         }
 
-        /* كود خلفية الفيديو */
+        /* كود خلفية الفيديو المحسن */
         #bg-video {
             position: absolute;
             top: 50%;
@@ -39,19 +40,20 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -2; /* تحت كل حاجة */
+            z-index: -2;
             transform: translate(-50%, -50%);
-            object-fit: cover; /* عشان الفيديو ما يتمطش */
+            object-fit: cover;
+            background-size: cover;
         }
 
-        /* طبقة سواد شفافة عشان تخلي الموقع فخم والكتابة واضحة */
+        /* طبقة سواد سينمائية */
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* 50% سواد */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
             z-index: -1;
         }
 
@@ -62,108 +64,43 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 10vw, 5.5rem); /* حجم مرن حسب الشاشة */
+            font-size: clamp(2rem, 9vw, 5.5rem);
             margin: 0;
             letter-spacing: 12px;
             color: #e63946;
             text-transform: uppercase;
-            text-shadow: 0 0 30px rgba(230, 57, 70, 0.4);
+            text-shadow: 0 5px 15px rgba(0,0,0,0.9);
             font-weight: 700;
         }
 
         .hero p {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            letter-spacing: 8px;
-            margin-top: 10px;
-            color: #ccc;
+            font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+            letter-spacing: 6px;
+            margin-top: 15px;
+            color: #eee;
             text-transform: uppercase;
         }
 
-        /* الزرار الأحمر الشهير */
         .btn-red {
             display: inline-block;
             margin-top: 40px;
-            padding: 18px 45px;
+            padding: 16px 40px;
             background-color: #e63946;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            border-radius: 4px;
+            font-size: 1rem;
+            border-radius: 2px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: 0.4s ease;
+            border: 2px solid #e63946;
         }
 
         .btn-red:hover {
             background-color: transparent;
-            border-color: #e63946;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+            color: #fff;
+            box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
         }
 
-        /* قسم القصة - تحت الهيرو */
         .story-section {
-            padding: 100px 15%;
-            text-align: center;
-            background-color: #050505;
-        }
-
-        .story-section h2 {
-            color: #e63946;
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-            letter-spacing: 3px;
-        }
-
-        .story-section p {
-            line-height: 1.9;
-            font-size: 1.2rem;
-            color: #aaa;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            background: #000;
-            border-top: 1px solid #1a1a1a;
-            color: #555;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
-    </style>
-</head>
-<body>
-
-    <section class="hero">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="videos/hero-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-        
-        <div class="hero-content">
-            <h1>The Legendary Pentagram</h1>
-            <p>Cretaceous Period</p>
-            <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn-red">Watch Prologue</a>
-        </div>
-    </section>
-
-    <section class="story-section">
-        <h2>A WORLD WITHOUT WORDS</h2>
-        <p>
-            In the heart of the Late Cretaceous, survival is the only law. 
-            Follow the journey of five unique dinosaur factions in a groundbreaking 
-            visual storytelling experience where every frame tells a story of instinct, 
-            power, and the raw beauty of a prehistoric era.
-        </p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 DINO MOVIE STUDIOS. CREATED BY MALEK MOHAMED.</p>
-    </footer>
-
-</body>
-</html>
+            padding: 120px 10%;
