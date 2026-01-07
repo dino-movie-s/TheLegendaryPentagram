@@ -14,14 +14,13 @@
             overflow: hidden;
         }
 
-        /* تنسيق المحتوى ليكون فوق الفيديو */
         .content {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             color: white;
-            z-index: 10; /* عشان نضمن إنه فوق الفيديو */
+            z-index: 10;
             width: 100%;
         }
 
@@ -48,7 +47,8 @@
 <body>
 
     <video autoplay muted loop playsinline style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;">
-        <source src="videos/hero-video.mp4" type="video/mp4">
+        <source src="https://dino-movie-s.github.io/TheLegendaryPentagram/videos/hero-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
 
     <div class="content">
