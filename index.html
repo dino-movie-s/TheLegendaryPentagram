@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>The Legendary Pentagram | Official</title>
@@ -10,33 +10,19 @@
             margin: 0; padding: 0;
             background-color: #000;
             font-family: 'Oswald', sans-serif;
-            height: 100%; overflow: hidden;
+            height: 100%; width: 100%;
+            overflow: hidden;
         }
 
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* كود الفيديو اللي اشتغل في التجربة */
-        video {
+        /* تنسيق المحتوى ليكون فوق الفيديو */
+        .content {
             position: absolute;
             top: 50%; left: 50%;
-            min-width: 100%; min-height: 100%;
-            width: auto; height: auto;
-            z-index: -1;
             transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-
-        .content {
+            text-align: center;
             color: white;
-            z-index: 1;
-            text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
+            z-index: 10; /* عشان نضمن إنه فوق الفيديو */
+            width: 100%;
         }
 
         h1 {
@@ -44,7 +30,7 @@
             color: #e63946;
             letter-spacing: 10px;
             margin: 0;
-            text-transform: uppercase;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.9);
         }
 
         .btn {
@@ -61,17 +47,15 @@
 </head>
 <body>
 
-    <section class="hero">
-        <video autoplay muted loop playsinline>
-            <source src="videos/hero-video.mp4" type="video/mp4">
-        </video>
+    <video autoplay muted loop playsinline style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;">
+        <source src="videos/hero-video.mp4" type="video/mp4">
+    </video>
 
-        <div class="content">
-            <h1>The Legendary Pentagram</h1>
-            <p style="letter-spacing: 5px;">A DINO MOVIE STUDIOS ORIGINAL</p>
-            <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn">WATCH PROLOGUE</a>
-        </div>
-    </section>
+    <div class="content">
+        <h1>The Legendary Pentagram</h1>
+        <p style="letter-spacing: 5px; text-shadow: 2px 2px 10px #000;">A DINO MOVIE STUDIOS ORIGINAL</p>
+        <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn">WATCH PROLOGUE</a>
+    </div>
 
 </body>
 </html>
