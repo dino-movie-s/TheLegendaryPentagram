@@ -15,6 +15,7 @@
             scroll-behavior: smooth;
         }
 
+        /* واجهة الموقع الرئيسية */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), 
                         url('images/hero-bg.jpg') no-repeat center center/cover;
@@ -32,6 +33,7 @@
             justify-content: center;
         }
 
+        /* اللوجو الرئيسي */
         .main-logo {
             max-width: 900px; 
             width: 90%;       
@@ -49,66 +51,191 @@
             font-weight: 300;
         }
 
-        /* ستايل قسم اليوتيوب الجديد */
+        /* منطقة اليوتيوب - ستايل جوراسيك وورلد */
         .watch-now-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .watch-label {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 3px;
             color: #fff;
             text-transform: uppercase;
             font-weight: bold;
+            opacity: 0.9;
         }
 
         .youtube-btn {
-            background-color: #fff; /* خلفية بيضاء زي صورة جوراسيك وورلد */
-            padding: 15px 40px;
-            border-radius: 8px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: #fff;
+            padding: 12px 35px;
+            border-radius: 6px;
+            transition: 0.3s ease-in-out;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 180px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
+        /* حل مشكلة "الفعص": جعل العرض تلقائي والارتفاع ثابت */
         .youtube-btn img {
-            width: 100%;
-            height: auto;
-            max-height: 25px; /* عشان حجم الشعار يفضل متناسق */
+            height: 25px;    /* الارتفاع ثابت */
+            width: auto;     /* العرض يتحدد تلقائياً عشان الصورة ما تضغظش */
+            display: block;
         }
 
         .youtube-btn:hover {
-            transform: scale(1.1); /* تأثير التكبير عند الوقوف عليه */
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
             background-color: #f0f0f0;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
-        /* --- باقي الموقع ثابت --- */
-        .about-section { padding: 100px 10%; background: #000; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
-        .about-poster { flex: 1; min-width: 300px; max-width: 450px; }
-        .about-poster img { width: 100%; border: 1px solid #333; box-shadow: 0 0 30px rgba(230, 57, 70, 0.2); border-radius: 4px; }
-        .about-info { flex: 2; min-width: 300px; }
-        .about-info h2 { font-size: 2.8rem; color: #fff; margin: 0; letter-spacing: 3px; border-left: 5px solid #e63946; padding-left: 20px; text-transform: uppercase; }
-        .about-info p { font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #bbb; margin: 30px 0; }
-        .crew-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; border-top: 1px solid #222; padding-top: 30px; }
-        .crew-item h4 { color: #e63946; margin: 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
-        .crew-item p { color: #fff; margin: 5px 0; font-size: 1.1rem; font-weight: bold; }
-        .factions { padding: 80px 5%; background: #050505; }
-        .factions h2 { text-align: center; font-size: 3rem; margin-bottom: 50px; color: #fff; letter-spacing: 5px; text-transform: uppercase; }
-        .faction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
-        .faction-card { background: #0a0a0a; padding: 40px 10px; border: 1px solid #1a1a1a; border-bottom: 4px solid #e63946; transition: 0.4s; text-align: center; }
-        .faction-card:hover { transform: translateY(-10px); background: #111; border-color: #e63946; box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1); }
-        .faction-card h3 { margin: 0; letter-spacing: 3px; color: #e63946; font-size: 1.8rem; text-transform: uppercase; }
-        .faction-card p { color: #666; font-size: 0.8rem; margin: 10px 0 0 0; text-transform: uppercase; letter-spacing: 1px; }
-        footer { padding: 60px; background: #000; text-align: center; border-top: 1px solid #111; }
-        .footer-logo { font-size: 1.5rem; color: #e63946; font-weight: bold; letter-spacing: 5px; margin-bottom: 10px; }
-        .copyright { font-size: 0.8rem; color: #444; margin-top: 20px; letter-spacing: 2px; }
+        /* سيكشن About */
+        .about-section {
+            padding: 100px 10%;
+            background: #000;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-poster {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+        }
+
+        .about-poster img {
+            width: 100%;
+            border: 1px solid #333;
+            box-shadow: 0 0 30px rgba(230, 57, 70, 0.2);
+            border-radius: 4px;
+        }
+
+        .about-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-info h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin: 0;
+            letter-spacing: 3px;
+            border-left: 5px solid #e63946;
+            padding-left: 20px;
+            text-transform: uppercase;
+        }
+
+        .about-info p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #bbb;
+            margin: 30px 0;
+        }
+
+        .crew-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+        }
+
+        .crew-item h4 {
+            color: #e63946;
+            margin: 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .crew-item p {
+            color: #fff;
+            margin: 5px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* سيكشن الأبطال */
+        .factions {
+            padding: 80px 5%;
+            background: #050505;
+        }
+
+        .factions h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #fff;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .faction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .faction-card {
+            background: #0a0a0a;
+            padding: 40px 10px;
+            border: 1px solid #1a1a1a;
+            border-bottom: 4px solid #e63946;
+            transition: 0.4s;
+            text-align: center;
+        }
+
+        .faction-card:hover {
+            transform: translateY(-10px);
+            background: #111;
+            border-color: #e63946;
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1);
+        }
+
+        .faction-card h3 {
+            margin: 0;
+            letter-spacing: 3px;
+            color: #e63946;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .faction-card p {
+            color: #666;
+            font-size: 0.8rem;
+            margin: 10px 0 0 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            padding: 60px;
+            background: #000;
+            text-align: center;
+            border-top: 1px solid #111;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: #e63946;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #444;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
     </style>
 </head>
 <body>
