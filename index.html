@@ -15,7 +15,6 @@
             scroll-behavior: smooth;
         }
 
-        /* واجهة الموقع الرئيسية */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
                         url('images/hero-bg.jpg') no-repeat center center/cover;
@@ -60,7 +59,6 @@
             box-shadow: 0 0 15px #e63946;
         }
 
-        /* سيكشن About على ستايل جوراسيك وورلد */
         .about-section {
             padding: 100px 10%;
             background: #000;
@@ -104,10 +102,8 @@
             line-height: 1.8;
             color: #bbb;
             margin: 30px 0;
-            font-weight: 300;
         }
 
-        /* سيكشن فريق العمل (Crew) - تحديث الأسماء */
         .crew-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -131,7 +127,7 @@
             font-weight: bold;
         }
 
-        /* قسم الفصائل */
+        /* سيكشن الأبطال (The Pentagram Members) */
         .factions {
             padding: 80px 5%;
             background: #050505;
@@ -143,17 +139,19 @@
             margin-bottom: 50px;
             color: #fff;
             letter-spacing: 5px;
+            text-transform: uppercase;
         }
 
         .faction-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
         }
 
         .faction-card {
-            background: #111;
-            padding: 30px 20px;
+            background: #0a0a0a;
+            padding: 40px 10px;
+            border: 1px solid #1a1a1a;
             border-bottom: 4px solid #e63946;
             transition: 0.4s;
             text-align: center;
@@ -161,14 +159,25 @@
 
         .faction-card:hover {
             transform: translateY(-10px);
-            background: #1a1a1a;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            background: #111;
+            border-color: #e63946;
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1);
         }
 
         .faction-card h3 {
-            margin: 10px 0;
-            letter-spacing: 2px;
-            color: #fff;
+            margin: 0;
+            letter-spacing: 3px;
+            color: #e63946;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .faction-card p {
+            color: #666;
+            font-size: 0.8rem;
+            margin: 10px 0 0 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         footer {
@@ -234,36 +243,32 @@
                     <h4>Studio</h4>
                     <p>Dino Movie Studios</p>
                 </div>
-                <div class="crew-item">
-                    <h4>Animation Style</h4>
-                    <p>High-Contrast</p>
-                </div>
             </div>
         </div>
     </section>
 
     <section class="factions">
-        <h2>THE PENTAGRAM FACTIONS</h2>
+        <h2>THE PENTAGRAM MEMBERS</h2>
         <div class="faction-grid">
             <div class="faction-card">
-                <h3>THE HUNTERS</h3>
-                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Tyrant Kings</p>
+                <h3>ALOS</h3>
+                <p>Allosaurus</p>
             </div>
             <div class="faction-card">
-                <h3>THE DEFENDERS</h3>
-                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Horned Guardians</p>
+                <h3>CARNO</h3>
+                <p>Carnotaurus</p>
             </div>
             <div class="faction-card">
-                <h3>THE SHADOWS</h3>
-                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Swift Raptors</p>
+                <h3>CERATO</h3>
+                <p>Ceratosaurus</p>
             </div>
             <div class="faction-card">
-                <h3>THE GIANTS</h3>
-                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Titans</p>
+                <h3>BARY</h3>
+                <p>Baryonyx</p>
             </div>
             <div class="faction-card">
-                <h3>THE SKY-LORDS</h3>
-                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Winged Terrors</p>
+                <h3>MAGO</h3>
+                <p>Majungasaurus</p>
             </div>
         </div>
     </section>
@@ -271,7 +276,7 @@
     <footer>
         <div class="footer-logo">DINO MOVIE STUDIOS</div>
         <p style="color: #666; letter-spacing: 3px;">REWRITING HISTORY THROUGH ANIMATION</p>
-        <div class="copyright">&copy; 2026 DINO MOVIE STUDIOS. ALL RIGHTS RESERVED.</div>
+        <div class="copyright">&copy; 2026 MALEK MOHAMED. ALL RIGHTS RESERVED.</div>
     </footer>
 
 </body>
