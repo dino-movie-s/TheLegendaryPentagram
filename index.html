@@ -39,7 +39,7 @@
             max-width: 850px; 
             width: 85%;       
             height: auto;
-            filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.3)); /* توهج برتقالي خفيف */
+            filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.3)); 
         }
 
         .hero p {
@@ -85,7 +85,6 @@
 
         .youtube-btn:hover {
             transform: scale(1.05);
-            /* توهج برتقالي عند الوقوف على الزرار */
             box-shadow: 0 0 20px rgba(255, 140, 0, 0.6);
         }
 
@@ -113,7 +112,7 @@
             color: #fff; 
             margin: 0; 
             letter-spacing: 2px; 
-            border-left: 5px solid #ff8c00; /* خط برتقالي */
+            border-left: 5px solid #ff8c00; 
             padding-left: 20px; 
             text-transform: uppercase; 
         }
@@ -148,7 +147,7 @@
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             max-width: 1000px;
@@ -173,16 +172,34 @@
             background: #0a0a0a; 
             padding: 30px 10px; 
             border: 1px solid #1a1a1a; 
-            border-bottom: 4px solid #ff8c00; /* حافة برتقالية */
+            border-bottom: 4px solid #ff8c00; 
             transition: 0.4s; 
             text-align: center; 
         }
         .faction-card:hover { transform: translateY(-10px); background: #111; border-color: #ff8c00; }
         .faction-card h3 { margin: 0; color: #ff8c00; font-size: 1.6rem; text-transform: uppercase; }
 
-        footer { padding: 40px; background: #000; text-align: center; border-top: 1px solid #111; }
-        .footer-logo { font-size: 1.2rem; color: #ff8c00; font-weight: bold; letter-spacing: 3px; }
-        .copyright { font-size: 0.7rem; color: #444; margin-top: 15px; }
+        /* تعديل الفوتر ليكون بالأحمر كما طلب المخرج */
+        footer { 
+            padding: 40px; 
+            background: #000; 
+            text-align: center; 
+            border-top: 1px solid #111; 
+        }
+        .footer-logo { 
+            font-size: 1.2rem; 
+            color: #e63946; /* اللون الأحمر */
+            font-weight: bold; 
+            letter-spacing: 3px; 
+            text-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
+        }
+        .copyright { 
+            font-size: 0.7rem; 
+            color: #444; 
+            margin-top: 15px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
