@@ -15,7 +15,6 @@
             scroll-behavior: smooth;
         }
 
-        /* واجهة الموقع الرئيسية */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), 
                         url('images/hero-bg.jpg') no-repeat center center/cover;
@@ -26,27 +25,33 @@
             text-align: center;
         }
 
-        /* تكبير اللوجو وتوضيحه */
+        /* تجميع العناصر وتقريبها من بعض */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         .main-logo {
-            max-width: 900px; /* كبرنا العرض هنا عشان يظهر بوضوح */
+            max-width: 900px; 
             width: 90%;       
             height: auto;
-            margin-bottom: 10px;
-            /* إضافة توهج خلف اللوجو عشان يفصله عن الخلفية */
-            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+            margin-bottom: -10px; /* تقريب اللوجو من النص اللي تحته */
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
         }
 
         .hero p {
             font-size: 1.5rem;
-            letter-spacing: 10px; /* وسعنا المسافات شوية للفخامة */
+            letter-spacing: 10px;
             color: #fff;
-            margin-bottom: 35px;
+            margin: 0 0 20px 0; /* تقليل المسافة تحت النص */
             text-transform: uppercase;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
         }
 
         .btn {
-            padding: 18px 50px;
+            padding: 15px 45px;
             background-color: #e63946;
             color: white;
             text-decoration: none;
@@ -64,149 +69,26 @@
             box-shadow: 0 0 20px #e63946;
         }
 
-        /* سيكشن About */
-        .about-section {
-            padding: 100px 10%;
-            background: #000;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-poster {
-            flex: 1;
-            min-width: 300px;
-            max-width: 450px;
-        }
-
-        .about-poster img {
-            width: 100%;
-            border: 1px solid #333;
-            box-shadow: 0 0 30px rgba(230, 57, 70, 0.2);
-            border-radius: 4px;
-        }
-
-        .about-info {
-            flex: 2;
-            min-width: 300px;
-        }
-
-        .about-info h2 {
-            font-size: 2.8rem;
-            color: #fff;
-            margin: 0;
-            letter-spacing: 3px;
-            border-left: 5px solid #e63946;
-            padding-left: 20px;
-            text-transform: uppercase;
-        }
-
-        .about-info p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.25rem;
-            line-height: 1.8;
-            color: #bbb;
-            margin: 30px 0;
-        }
-
-        .crew-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 30px;
-            border-top: 1px solid #222;
-            padding-top: 30px;
-        }
-
-        .crew-item h4 {
-            color: #e63946;
-            margin: 0;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .crew-item p {
-            color: #fff;
-            margin: 5px 0;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        /* سيكشن الأبطال */
-        .factions {
-            padding: 80px 5%;
-            background: #050505;
-        }
-
-        .factions h2 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 50px;
-            color: #fff;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-        }
-
-        .faction-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .faction-card {
-            background: #0a0a0a;
-            padding: 40px 10px;
-            border: 1px solid #1a1a1a;
-            border-bottom: 4px solid #e63946;
-            transition: 0.4s;
-            text-align: center;
-        }
-
-        .faction-card:hover {
-            transform: translateY(-10px);
-            background: #111;
-            border-color: #e63946;
-            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1);
-        }
-
-        .faction-card h3 {
-            margin: 0;
-            letter-spacing: 3px;
-            color: #e63946;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-        }
-
-        .faction-card p {
-            color: #666;
-            font-size: 0.8rem;
-            margin: 10px 0 0 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        footer {
-            padding: 60px;
-            background: #000;
-            text-align: center;
-            border-top: 1px solid #111;
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
-            color: #e63946;
-            font-weight: bold;
-            letter-spacing: 5px;
-            margin-bottom: 10px;
-        }
-
-        .copyright {
-            font-size: 0.8rem;
-            color: #444;
-            margin-top: 20px;
-            letter-spacing: 2px;
-        }
+        /* --- باقي التنسيقات ثابتة لضمان عمل الموقع --- */
+        .about-section { padding: 100px 10%; background: #000; display: flex; flex-wrap: wrap; gap: 50px; align-items: center; }
+        .about-poster { flex: 1; min-width: 300px; max-width: 450px; }
+        .about-poster img { width: 100%; border: 1px solid #333; box-shadow: 0 0 30px rgba(230, 57, 70, 0.2); border-radius: 4px; }
+        .about-info { flex: 2; min-width: 300px; }
+        .about-info h2 { font-size: 2.8rem; color: #fff; margin: 0; letter-spacing: 3px; border-left: 5px solid #e63946; padding-left: 20px; text-transform: uppercase; }
+        .about-info p { font-family: 'Roboto', sans-serif; font-size: 1.25rem; line-height: 1.8; color: #bbb; margin: 30px 0; }
+        .crew-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; border-top: 1px solid #222; padding-top: 30px; }
+        .crew-item h4 { color: #e63946; margin: 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+        .crew-item p { color: #fff; margin: 5px 0; font-size: 1.1rem; font-weight: bold; }
+        .factions { padding: 80px 5%; background: #050505; }
+        .factions h2 { text-align: center; font-size: 3rem; margin-bottom: 50px; color: #fff; letter-spacing: 5px; text-transform: uppercase; }
+        .faction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+        .faction-card { background: #0a0a0a; padding: 40px 10px; border: 1px solid #1a1a1a; border-bottom: 4px solid #e63946; transition: 0.4s; text-align: center; }
+        .faction-card:hover { transform: translateY(-10px); background: #111; border-color: #e63946; box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1); }
+        .faction-card h3 { margin: 0; letter-spacing: 3px; color: #e63946; font-size: 1.8rem; text-transform: uppercase; }
+        .faction-card p { color: #666; font-size: 0.8rem; margin: 10px 0 0 0; text-transform: uppercase; letter-spacing: 1px; }
+        footer { padding: 60px; background: #000; text-align: center; border-top: 1px solid #111; }
+        .footer-logo { font-size: 1.5rem; color: #e63946; font-weight: bold; letter-spacing: 5px; margin-bottom: 10px; }
+        .copyright { font-size: 0.8rem; color: #444; margin-top: 20px; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -220,16 +102,10 @@
     </section>
 
     <section class="about-section">
-        <div class="about-poster">
-            <img src="images/poster.jpg" alt="The Legendary Pentagram Poster">
-        </div>
+        <div class="about-poster"><img src="images/poster.jpg" alt="Poster"></div>
         <div class="about-info">
             <h2>Not All Hunters Walk Alone</h2>
-            <p>
-                Five dinosaurs hatch in the heart of a brutal world that shows no mercy to the weak, 
-                and they must join forces and face the fiercest challenges in order to survive... 
-                until they ascend to the throne of power in the age of giants.
-            </p>
+            <p>Five dinosaurs hatch in the heart of a brutal world that shows no mercy to the weak, and they must join forces and face the fiercest challenges in order to survive... until they ascend to the throne of power in the age of giants.</p>
             <div class="crew-info">
                 <div class="crew-item"><h4>Director & Creator</h4><p>Malek Mohamed</p></div>
                 <div class="crew-item"><h4>Writer</h4><p>Mohamed Eyad</p></div>
