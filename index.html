@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Legendary Pentagram | Official</title>
+    <title>The Legendary Pentagram | Official Website</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto:wght@300;400&display=swap');
         
         body, html {
             margin: 0; padding: 0;
-            height: 100%;
-            background-color: #000;
+            background-color: #050505;
+            color: #fff;
             font-family: 'Oswald', sans-serif;
+            scroll-behavior: smooth;
         }
 
+        /* واجهة الموقع الرئيسية */
         .hero {
-            /* استبدل hero-bg.jpg باسم صورتك */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
                         url('images/hero-bg.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
@@ -25,43 +26,170 @@
             text-align: center;
         }
 
-        .content {
-            color: white;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 10vw, 5.5rem);
+        .hero h1 {
+            font-size: clamp(3rem, 12vw, 6rem);
             color: #e63946;
-            letter-spacing: 12px;
+            letter-spacing: 15px;
             margin: 0;
             text-transform: uppercase;
-            text-shadow: 0 0 30px rgba(0,0,0,0.8);
+            text-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
         }
 
-        p {
-            font-size: 1.2rem;
-            letter-spacing: 5px;
-            margin-top: 10px;
+        .hero p {
+            font-size: 1.5rem;
+            letter-spacing: 8px;
             color: #ccc;
+            margin-bottom: 30px;
         }
 
         .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 18px 45px;
+            padding: 15px 40px;
             background-color: #e63946;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            text-transform: uppercase;
             border-radius: 5px;
             transition: 0.3s;
+            border: 2px solid #e63946;
+            display: inline-block;
+            text-transform: uppercase;
         }
 
         .btn:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: transparent;
+            box-shadow: 0 0 15px #e63946;
+        }
+
+        /* سيكشن About على ستايل جوراسيك وورلد */
+        .about-section {
+            padding: 100px 10%;
+            background: #000;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-poster {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+        }
+
+        .about-poster img {
+            width: 100%;
+            border: 1px solid #333;
+            box-shadow: 0 0 30px rgba(230, 57, 70, 0.2);
+            border-radius: 4px;
+        }
+
+        .about-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-info h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-top: 0;
+            letter-spacing: 3px;
+            border-left: 5px solid #e63946;
+            padding-left: 20px;
+            text-transform: uppercase;
+        }
+
+        .about-info p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #bbb;
+            margin: 30px 0;
+        }
+
+        /* سيكشن فريق العمل (Crew) */
+        .crew-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+        }
+
+        .crew-item h4 {
+            color: #e63946;
+            margin: 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .crew-item p {
+            color: #fff;
+            margin: 5px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* قسم الفصائل */
+        .factions {
+            padding: 80px 5%;
+            background: #050505;
+        }
+
+        .factions h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #fff;
+            letter-spacing: 5px;
+        }
+
+        .faction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .faction-card {
+            background: #111;
+            padding: 30px 20px;
+            border-bottom: 4px solid #e63946;
+            transition: 0.4s;
+            text-align: center;
+        }
+
+        .faction-card:hover {
+            transform: translateY(-10px);
+            background: #1a1a1a;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .faction-card h3 {
+            margin: 10px 0;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        footer {
+            padding: 60px;
+            background: #000;
+            text-align: center;
+            border-top: 1px solid #111;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: #e63946;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #444;
+            margin-top: 20px;
+            letter-spacing: 2px;
         }
     </style>
 </head>
@@ -70,10 +198,77 @@
     <section class="hero">
         <div class="content">
             <h1>The Legendary Pentagram</h1>
-            <p>DINO MOVIE STUDIOS ORIGINAL</p>
-            <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn">Watch Prologue</a>
+            <p>SURVIVAL IS A SIN</p>
+            <a href="https://www.youtube.com/watch?v=7jtr0nLtako" target="_blank" class="btn">Watch the Prologue</a>
         </div>
     </section>
+
+    <section class="about-section">
+        <div class="about-poster">
+            <img src="images/poster.jpg" alt="The Legendary Pentagram Poster">
+        </div>
+
+        <div class="about-info">
+            <h2>A New Era Is Born</h2>
+            <p>
+                66 Million years ago, the world was ruled by instinct. No dialogue, no mercy. 
+                "The Legendary Pentagram" is a visual odyssey that takes you back to the final days 
+                of the Cretaceous period. In this high-contrast animation series, five dinosaur 
+                factions collide in a struggle where survival is the only law.
+            </p>
+
+            <div class="crew-info">
+                <div class="crew-item">
+                    <h4>Director & Creator</h4>
+                    <p>Malek Mohamed</p>
+                </div>
+                <div class="crew-item">
+                    <h4>Studio</h4>
+                    <p>Dino Movie Studios</p>
+                </div>
+                <div class="crew-item">
+                    <h4>Style</h4>
+                    <p>High-Contrast</p>
+                </div>
+                <div class="crew-item">
+                    <h4>Original Story</h4>
+                    <p>Malek Mohamed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="factions">
+        <h2>THE PENTAGRAM FACTIONS</h2>
+        <div class="faction-grid">
+            <div class="faction-card">
+                <h3>THE HUNTERS</h3>
+                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Tyrant Kings</p>
+            </div>
+            <div class="faction-card">
+                <h3>THE DEFENDERS</h3>
+                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Horned Guardians</p>
+            </div>
+            <div class="faction-card">
+                <h3>THE SHADOWS</h3>
+                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Swift Raptors</p>
+            </div>
+            <div class="faction-card">
+                <h3>THE GIANTS</h3>
+                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Titans</p>
+            </div>
+            <div class="faction-card">
+                <h3>THE SKY-LORDS</h3>
+                <p style="color: #666; font-size: 0.9rem; margin: 0;">The Winged Terrors</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">DINO MOVIE STUDIOS</div>
+        <p style="color: #666; letter-spacing: 3px;">REWRITING HISTORY THROUGH ANIMATION</p>
+        <div class="copyright">&copy; 2026 MALEK MOHAMED. ALL RIGHTS RESERVED.</div>
+    </footer>
 
 </body>
 </html>
